@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - SimpleBlog</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="site-title">SimpleBlog</a>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#all">All Posts</a>
+                    <a href="index.html#tech">Tech</a>
+                    <a href="index.html#life">Lifestyle</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <article class="single-post fade-in" id="postContent">
+                <!-- Post content will be dynamically inserted here -->
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 SimpleBlog. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to get URL parameters
+        function getPostId() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
+        }
+
+        // Function to load and display a single post
+        async function loadPost() {
+            const postId = getPostId();
+            if (!postId) {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            try {
+                const response = await fetch(`posts/${postId}.json`);
+                const post = await response.json();
+                displayPost(post);
+                document.title = `${post.title} - SimpleBlog`;
+            } catch (error) {
+                console.error('Error loading post:', error);
+                displayError();
+            }
+        }
+
+        // Function to display a single post
+        function displayPost(post) {
+            const postContent = document.getElementById('postContent');
+            postContent.innerHTML = `
+                <header class="single-post-header">
+                    <h1 class="single-post-title">${post.title}</h1>
+                    <div class="single-post-meta">
+                        <span>Published on ${post.date}</span>
+                        <span>Category: ${post.category}</span>
+                    </div>
+                </header>
+                <img src="${post.image}" alt="${post.title}" style="width: 100%; height: auto; margin-bottom: 2rem;">
+                <div class="single-post-content">
+                    ${post.content}
+                </div>
+            `;
+        }
+
+        // Function to display error message
+        function displayError() {
+            const postContent = document.getElementById('postContent');
+            postContent.innerHTML = `
+                <div class="error-message text-center">
+                    <h2>Oops! Something went wrong.</h2>
+                    <p>Unable to load the blog post. Please try again later.</p>
+                    <a href="index.html" class="btn">Return to Home</a>
+                </div>
+            `;
+        }
+
+        // Load post when the page loads
+        document.addEventListener('DOMContentLoaded', loadPost);
+    </script>
+</body>
+</html>

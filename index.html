@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Simple Blog</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="site-title">SimpleBlog</a>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="#" onclick="filterPosts('all')">All Posts</a>
+                    <a href="#" onclick="filterPosts('tech')">Tech</a>
+                    <a href="#" onclick="filterPosts('life')">Lifestyle</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="post-grid" id="postGrid">
+                <!-- Posts will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 SimpleBlog. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/blog.js"></script>
+</body>
+</html>

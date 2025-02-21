@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Getting Started with Web Development",
+      "excerpt": "Learn the basics of web development and start your journey as a developer.",
+      "content": "<p>Web development is an exciting field that combines creativity with technical skills. In this post, we'll explore the fundamental concepts you need to know to get started.</p><h2>The Basics</h2><p>To begin your web development journey, you'll need to understand three core technologies:</p><ul><li>HTML for structure</li><li>CSS for styling</li><li>JavaScript for interactivity</li></ul><p>Each of these technologies plays a crucial role in creating modern websites...</p>",
+      "image": "images/web-dev.jpg",
+      "date": "2025-02-19",
+      "category": "Tech"
+    },
+    {
+      "id": "2",
+      "title": "Productivity Tips for Developers",
+      "excerpt": "Boost your productivity with these essential tips for developers.",
+      "content": "<p>Being productive as a developer isn't just about writing code faster. It's about working smarter and maintaining a sustainable pace...</p>",
+      "image": "images/productivity.jpg",
+      "date": "2025-02-18",
+      "category": "Life"
+    }
+  ]
+}
