@@ -6,6 +6,49 @@
     <meta name="description" content="Technical deep dive into AI-driven innovations in clinical research for 2025">
     <title>AI-Driven Innovations in Clinical Research</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .presentation-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 600px;
+            background: #000;
+            margin: 2rem 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .presentation-container iframe {
+            width: 100%;
+            height: 100vh;
+            min-height: 600px;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        .presentation-download {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .presentation-download .btn {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.75rem 1.5rem;
+        }
+        .single-post {
+            max-width: 100% !important;
+            padding: 0 !important;
+        }
+        .single-post-header {
+            padding: 2rem;
+        }
+        .single-post-content > *:not(.presentation-container) {
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 2rem;
+        }
+    </style>
 </head>
 <body>
     <article class="single-post">
@@ -18,7 +61,9 @@
         </header>
         
         <div class="single-post-content">
-            <iframe src="/marps/ai-clinical-research-2025/presentation.html" style="width: 100%; height: 600px; border: none;"></iframe>
+            <div class="presentation-container">
+                <iframe src="/marps/ai-clinical-research-2025/presentation.html"></iframe>
+            </div>
             
             <div class="presentation-download">
                 <p>You can also download the presentation in different formats:</p>
