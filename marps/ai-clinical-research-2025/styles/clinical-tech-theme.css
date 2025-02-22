@@ -1,0 +1,169 @@
+/* clinical-tech-theme.css */
+@import 'default';
+
+:root {
+  --primary: #2C3E50;
+  --secondary: #3498DB;
+  --accent: #E74C3C;
+  --background: #ECF0F1;
+  --text: #2C3E50;
+  --code-background: #F7F9FA;
+  --citation: #7F8C8D;
+  
+  --heading-font: 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --body-font: 'SF Pro Text', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --code-font: 'SF Mono', Menlo, Monaco, Consolas, monospace;
+}
+
+section {
+  background: var(--background);
+  font-family: var(--body-font);
+  color: var(--text);
+  padding: 2rem;
+}
+
+section.lead {
+  background: linear-gradient(135deg, var(--primary) 0%, #34495E 100%);
+  color: white;
+}
+
+h1 {
+  font-family: var(--heading-font);
+  color: var(--primary);
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 0.5em;
+}
+
+section.lead h1 {
+  color: white;
+  border-bottom: none;
+}
+
+h2 {
+  font-family: var(--heading-font);
+  color: var(--secondary);
+}
+
+section.lead h2 {
+  color: #ECF0F1;
+}
+
+code {
+  font-family: var(--code-font);
+  background: var(--code-background);
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+}
+
+pre {
+  background: var(--code-background);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 1em 0;
+}
+
+.cite {
+  font-family: var(--body-font);
+  font-size: 0.7em;
+  color: var(--citation);
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+
+.architecture {
+  background: var(--code-background);
+  padding: 1em;
+  border-radius: 8px;
+  font-family: var(--code-font);
+  border-left: 3px solid var(--secondary);
+}
+
+.tech-stack {
+  font-size: 0.9em;
+  background: var(--code-background);
+  padding: 0.5em;
+  border-left: 3px solid var(--secondary);
+  margin: 0.5em 0;
+}
+
+/* Mermaid Diagram Styling */
+.mermaid {
+  background: white;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Code Block Styling */
+.hljs {
+  background: var(--code-background);
+  border-radius: 8px;
+  padding: 1em;
+}
+
+/* Table Styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+th {
+  background: var(--secondary);
+  color: white;
+  padding: 0.5em;
+}
+
+td {
+  padding: 0.5em;
+  border: 1px solid #ddd;
+}
+
+/* List Styling */
+ul, ol {
+  padding-left: 1.5em;
+}
+
+li {
+  margin: 0.3em 0;
+}
+
+/* Link Styling */
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* Block Quote Styling */
+blockquote {
+  border-left: 3px solid var(--secondary);
+  margin: 1em 0;
+  padding-left: 1em;
+  color: var(--citation);
+}
+
+/* Image Styling */
+img {
+  border-radius: 8px;
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Grid Layout */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1em 0;
+}
+
+/* Progress Bar */
+.progress {
+  background: var(--secondary);
+}

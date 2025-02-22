@@ -1,0 +1,25 @@
+{
+  "name": "simple-blog",
+  "version": "1.0.0",
+  "description": "A simple static blog site",
+  "main": "index.js",
+  "scripts": {
+    "dev": "http-server . -p 3000",
+    "build": "npm run copy-assets",
+    "copy-assets": "cp -r images/* dist/images/ && cp -r css/* dist/css/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blog",
+    "static-site",
+    "markdown"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "marked": "^4.2.4"
+  }
+}

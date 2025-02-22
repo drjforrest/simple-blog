@@ -17,6 +17,42 @@
       "image": "images/productivity.jpg",
       "date": "2025-02-18",
       "category": "Life"
+    },
+    {
+      "id": "3",
+      "title": "AI Integration in Clinical Research",
+      "excerpt": "A comprehensive guide to practical applications of AI in clinical research and the CRO industry.",
+      "content": "content/ai-clinical-research.html",
+      "image": "images/healthcare-tech.jpeg",
+      "date": "2025-01-14",
+      "category": "Healthcare"
+    },
+    {
+      "id": "4",
+      "title": "AI and Digital Disinformation in Public Health",
+      "excerpt": "Exploring how AI can be leveraged to combat digital disinformation in public health communications.",
+      "content": "content/ai-disinformation.html",
+      "image": "images/healthcare-tech-connectivity.jpeg",
+      "date": "2025-02-20",
+      "category": "Healthcare"
+    },
+    {
+      "id": "5",
+      "title": "Marp Presentation Guide",
+      "excerpt": "A comprehensive guide to creating beautiful presentations with Marp.",
+      "content": "content/marp-guide.html",
+      "image": "images/modern-lab-science-collaboration.jpeg",
+      "date": "2025-02-21",
+      "category": "Tech"
+    },
+    {
+      "id": "6",
+      "title": "AI in Clinical Research 2025",
+      "excerpt": "Future perspectives on AI applications in clinical research and healthcare.",
+      "content": "content/ai-clinical-2025.html",
+      "image": "images/futuristic-medical-lab.jpeg",
+      "date": "2025-02-22",
+      "category": "Healthcare"
     }
   ]
 }
