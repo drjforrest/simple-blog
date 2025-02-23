@@ -1,0 +1,73 @@
+[Previous CSS content remains the same...]
+
+/* Sitemap and Explanation Sections */
+.explanation-section {
+    padding: 2rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.explanation-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(var(--foreground-rgb), 0.8);
+    margin-bottom: 2rem;
+}
+
+.sitemap-container {
+    background: var(--surface-base);
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid rgba(var(--border-rgb), 0.1);
+    margin-top: 2rem;
+}
+
+.sitemap {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.sitemap-section {
+    text-align: left;
+    min-width: 200px;
+}
+
+.sitemap-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.sitemap-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sitemap-item {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sitemap-icon {
+    color: rgba(var(--foreground-rgb), 0.4);
+    width: 1rem;
+}
+
+/* Visual divider */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(var(--border-rgb), 0.5),
+        transparent
+    );
+    margin: 3rem 0;
+}

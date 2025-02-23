@@ -1,107 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Blog | Dr. Jamie I. Forrest</title>
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/globals.css">
-    <link rel="stylesheet" href="/css/navigation.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <style>
-        /* Ensure proper header spacing */
-        .main-content {
-            padding-top: 5rem;
-        }
-        
-        /* Basic grid for blog posts */
-        .posts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem 0;
-        }
-        
-        .post-card {
-            background: var(--surface-base);
-            border: 1px solid rgba(var(--border-rgb), 0.1);
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .post-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-    <header class="header">
-        <nav class="nav container">
-            <a href="/" class="logo-link">
-                <span class="logo-text">SimpleBlog</span>
-            </a>
-            
-            <div class="nav-links">
-                <a href="/" class="nav-link">Home</a>
-                <a href="/posts" class="nav-link">All Posts</a>
-                <a href="/tech" class="nav-link">Tech</a>
-                <a href="/lifestyle" class="nav-link">Lifestyle</a>
-                <button class="theme-toggle">
-                    <i class="fas fa-sun sun-icon"></i>
-                    <i class="fas fa-moon moon-icon"></i>
-                </button>
-            </div>
-            
-            <div class="mobile-menu-button">
-                <i class="fas fa-bars menu-icon"></i>
-                <i class="fas fa-times close-icon"></i>
-            </div>
-        </nav>
-        
-        <div class="mobile-menu">
-            <a href="/" class="mobile-nav-link">Home</a>
-            <a href="/posts" class="mobile-nav-link">All Posts</a>
-            <a href="/tech" class="mobile-nav-link">Tech</a>
-            <a href="/lifestyle" class="mobile-nav-link">Lifestyle</a>
-        </div>
-    </header>
+[Previous HTML content until hero section remains the same...]
 
-    <main class="main-content container">
-        <div id="error-message" class="error-message" style="display: none;">
-            <h1>Oops! Something went wrong.</h1>
-            <p>Unable to load blog posts. Please try again later.</p>
-        </div>
-        
-        <div class="posts-grid">
-            <!-- Posts will be dynamically inserted here -->
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <p>© 2025 SimpleBlog. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="/about">About</a>
-                <a href="/contact">Contact</a>
-                <a href="/privacy-policy">Privacy Policy</a>
+        <section class="explanation-section container">
+            <div class="explanation-text">
+                Welcome to my supplementary blog space. While my <a href="https://blog.drjforrest.com">main blog</a> 
+                focuses on in-depth series and featured content, this site serves two specific purposes:
+                <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+                    <li>Quick, standalone blog posts for timely thoughts and insights</li>
+                    <li>Interactive presentations (Marp) for talks and conferences</li>
+                </ul>
             </div>
-        </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script src="/js/navigation.js"></script>
-    <script src="/js/theme.js"></script>
-    <script src="/js/posts.js"></script>
-</body>
-</html>
+            <div class="sitemap-container">
+                <h3 style="margin-bottom: 2rem;">Site Organization</h3>
+                <div class="sitemap">
+                    <div class="sitemap-section">
+                        <h4 class="sitemap-title">Quick Blog Posts</h4>
+                        <ul class="sitemap-list">
+                            <li class="sitemap-item">
+                                <i class="fas fa-pen sitemap-icon"></i>
+                                <span>Individual Entries</span>
+                            </li>
+                            <li class="sitemap-item">
+                                <i class="fas fa-clock sitemap-icon"></i>
+                                <span>Timely Insights</span>
+                            </li>
+                            <li class="sitemap-item">
+                                <i class="fas fa-lightbulb sitemap-icon"></i>
+                                <span>Brief Thoughts</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sitemap-section">
+                        <h4 class="sitemap-title">Presentations</h4>
+                        <ul class="sitemap-list">
+                            <li class="sitemap-item">
+                                <i class="fas fa-desktop sitemap-icon"></i>
+                                <span>Interactive Slides</span>
+                            </li>
+                            <li class="sitemap-item">
+                                <i class="fas fa-chalkboard sitemap-icon"></i>
+                                <span>Conference Talks</span>
+                            </li>
+                            <li class="sitemap-item">
+                                <i class="fas fa-file-powerpoint sitemap-icon"></i>
+                                <span>Marp Decks</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sitemap-section">
+                        <h4 class="sitemap-title">Related Sites</h4>
+                        <ul class="sitemap-list">
+                            <li class="sitemap-item">
+                                <i class="fas fa-home sitemap-icon"></i>
+                                <a href="https://drjforrest.com">Main Website</a>
+                            </li>
+                            <li class="sitemap-item">
+                                <i class="fas fa-book sitemap-icon"></i>
+                                <a href="https://blog.drjforrest.com">Featured Blog</a>
+                            </li>
+                            <li class="sitemap-item">
+                                <i class="fas fa-chart-line sitemap-icon"></i>
+                                <a href="https://blog.drjforrest.com/african-digital-development">Featured Series</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+[Rest of the HTML content remains the same...]
