@@ -1,0 +1,29 @@
+:root {
+  /* Light theme */
+  --background: rgb(250, 250, 249);
+  --foreground: rgb(20, 20, 20);
+  --primary: rgb(26, 58, 92);
+  --accent: rgb(214, 40, 40);
+  --success: rgb(42, 157, 143);
+  --muted: rgb(112, 66, 20);
+  --surface-base: rgb(255, 255, 255);
+  --surface-muted: rgb(245, 245, 245);
+  --surface-elevated: rgb(250, 250, 250);
+  --border: rgb(229, 231, 235);
+
+  /* Font settings */
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+[data-theme="dark"] {
+  --background: rgb(23, 23, 23);
+  --foreground: rgb(250, 250, 249);
+  --primary: rgb(42, 157, 143);
+  --accent: rgb(214, 40, 40);
+  --success: rgb(26, 58, 92);
+  --muted: rgb(161, 161, 170);
+  --surface-base: rgb(32, 32, 32);
+  --surface-muted: rgb(39, 39, 42);
+  --surface-elevated: rgb(45, 45, 45);
+  --border: rgb(63, 63, 70);
+}

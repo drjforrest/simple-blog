@@ -1,0 +1,61 @@
+/* Presentation Layout */
+.presentation-container {
+    max-width: 90vw;
+    margin: 6rem auto;
+    padding: 0 1rem;
+}
+
+.presentation-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.presentation-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.presentation-meta {
+    color: var(--muted);
+    font-size: 0.875rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentation-meta time::after {
+    content: "•";
+    margin-left: 1rem;
+}
+
+/* Presentation Frame */
+.presentation-frame {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin: 2rem 0;
+}
+
+.presentation-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .presentation-container {
+        margin: 4rem auto;
+    }
+
+    .presentation-title {
+        font-size: 2rem;
+    }
+}

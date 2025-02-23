@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Title | Dr. Jamie I. Forrest</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/globals.css">
+    <link rel="stylesheet" href="/css/navigation.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/presentation.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="presentation-container">
+            <header class="presentation-header">
+                <h1 class="presentation-title">Presentation Title</h1>
+                <div class="presentation-meta">
+                    <time datetime="2024-02-22">February 22, 2024</time>
+                    <span class="presentation-author">Dr. Jamie I. Forrest</span>
+                </div>
+            </header>
+
+            <!-- Presentation iframe will be inserted here -->
+            <div class="presentation-frame">
+                <iframe id="presentation-content" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="/js/navigation.js"></script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/layout.js"></script>
+    <script>
+        // Get presentation path from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const presentationPath = urlParams.get('presentation');
+        
+        if (presentationPath) {
+            const iframe = document.getElementById('presentation-content');
+            iframe.src = presentationPath;
+            
+            // Update title
+            const titleParts = presentationPath.split('/');
+            const presentationName = titleParts[titleParts.length - 1].replace('.html', '');
+            document.title = `${presentationName} | Dr. Jamie I. Forrest`;
+            document.querySelector('.presentation-title').textContent = presentationName;
+        }
+    </script>
+</body>
+</html>

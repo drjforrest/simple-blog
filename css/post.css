@@ -1,0 +1,145 @@
+/* Post Layout */
+.post {
+    max-width: 48rem;
+    margin: 6rem auto;
+    padding: 0 1rem;
+}
+
+.post-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.post-meta {
+    color: var(--muted);
+    font-size: 0.875rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-meta time::after {
+    content: "•";
+    margin-left: 1rem;
+}
+
+/* Post Content Typography */
+.post-content {
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+.post-content > * + * {
+    margin-top: 1.5rem;
+}
+
+.post-content h2 {
+    font-size: 1.875rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-content h3 {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.post-content a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.2em;
+}
+
+.post-content a:hover {
+    color: var(--accent);
+}
+
+/* Lists */
+.post-content ul,
+.post-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-content li + li {
+    margin-top: 0.5rem;
+}
+
+/* Blockquotes */
+.post-content blockquote {
+    border-left: 4px solid var(--primary);
+    padding-left: 1.5rem;
+    margin-left: 0;
+    font-style: italic;
+    color: var(--muted);
+}
+
+/* Code blocks */
+.post-content pre {
+    background-color: var(--surface-muted);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+}
+
+.post-content code {
+    font-family: ui-monospace, monospace;
+    font-size: 0.875em;
+    background-color: var(--surface-muted);
+    padding: 0.2em 0.4em;
+    border-radius: 0.25rem;
+}
+
+/* Images */
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+}
+
+/* Tables */
+.post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+.post-content th,
+.post-content td {
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+}
+
+.post-content th {
+    background-color: var(--surface-muted);
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .post {
+        margin: 4rem auto;
+    }
+
+    .post-title {
+        font-size: 2rem;
+    }
+
+    .post-content {
+        font-size: 1rem;
+    }
+}
