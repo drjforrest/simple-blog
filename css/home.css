@@ -1,66 +1,60 @@
-[Previous CSS content remains the same...]
+/* [Previous styles for hero and content sections remain the same] */
 
-/* Sitemap and Explanation Sections */
+/* Site Organization Section */
 .explanation-section {
     padding: 2rem 0;
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .explanation-text {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: rgba(var(--foreground-rgb), 0.8);
     margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
-.sitemap-container {
-    background: var(--surface-base);
-    border-radius: 1rem;
-    padding: 2rem;
-    border: 1px solid rgba(var(--border-rgb), 0.1);
-    margin-top: 2rem;
+.explanation-text ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
 }
 
-.sitemap {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+.explanation-text li {
+    margin: 0.5rem 0;
 }
 
-.sitemap-section {
-    text-align: left;
-    min-width: 200px;
+.site-organization {
+    margin: 2rem 0;
 }
 
-.sitemap-title {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+.site-organization h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.site-organization h3 {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
     color: var(--primary);
 }
 
-.sitemap-list {
+.site-organization ul {
     list-style: none;
-    padding: 0;
+    padding-left: 1rem;
 }
 
-.sitemap-item {
-    font-size: 0.875rem;
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.site-organization li {
+    margin: 0.5rem 0;
+    line-height: 1.5;
 }
 
-.sitemap-icon {
-    color: rgba(var(--foreground-rgb), 0.4);
-    width: 1rem;
+.site-organization a {
+    color: var(--primary);
+    text-decoration: none;
 }
 
-/* Visual divider */
+.site-organization a:hover {
+    color: var(--accent);
+}
+
 .section-divider {
     height: 1px;
     background: linear-gradient(

@@ -1,75 +1,91 @@
-[Previous HTML content until hero section remains the same...]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Dr. Jamie I. Forrest</title>
+    
+    <!-- Base styles -->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #1a1a1a;
+        }
 
-        <section class="explanation-section container">
-            <div class="explanation-text">
-                Welcome to my supplementary blog space. While my <a href="https://blog.drjforrest.com">main blog</a> 
-                focuses on in-depth series and featured content, this site serves two specific purposes:
-                <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
-                    <li>Quick, standalone blog posts for timely thoughts and insights</li>
-                    <li>Interactive presentations (Marp) for talks and conferences</li>
-                </ul>
-            </div>
+        h1, h2, h3 { 
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
 
-            <div class="sitemap-container">
-                <h3 style="margin-bottom: 2rem;">Site Organization</h3>
-                <div class="sitemap">
-                    <div class="sitemap-section">
-                        <h4 class="sitemap-title">Quick Blog Posts</h4>
-                        <ul class="sitemap-list">
-                            <li class="sitemap-item">
-                                <i class="fas fa-pen sitemap-icon"></i>
-                                <span>Individual Entries</span>
-                            </li>
-                            <li class="sitemap-item">
-                                <i class="fas fa-clock sitemap-icon"></i>
-                                <span>Timely Insights</span>
-                            </li>
-                            <li class="sitemap-item">
-                                <i class="fas fa-lightbulb sitemap-icon"></i>
-                                <span>Brief Thoughts</span>
-                            </li>
-                        </ul>
-                    </div>
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.5rem; }
+        h3 { font-size: 1.25rem; }
 
-                    <div class="sitemap-section">
-                        <h4 class="sitemap-title">Presentations</h4>
-                        <ul class="sitemap-list">
-                            <li class="sitemap-item">
-                                <i class="fas fa-desktop sitemap-icon"></i>
-                                <span>Interactive Slides</span>
-                            </li>
-                            <li class="sitemap-item">
-                                <i class="fas fa-chalkboard sitemap-icon"></i>
-                                <span>Conference Talks</span>
-                            </li>
-                            <li class="sitemap-item">
-                                <i class="fas fa-file-powerpoint sitemap-icon"></i>
-                                <span>Marp Decks</span>
-                            </li>
-                        </ul>
-                    </div>
+        ul {
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
 
-                    <div class="sitemap-section">
-                        <h4 class="sitemap-title">Related Sites</h4>
-                        <ul class="sitemap-list">
-                            <li class="sitemap-item">
-                                <i class="fas fa-home sitemap-icon"></i>
-                                <a href="https://drjforrest.com">Main Website</a>
-                            </li>
-                            <li class="sitemap-item">
-                                <i class="fas fa-book sitemap-icon"></i>
-                                <a href="https://blog.drjforrest.com">Featured Blog</a>
-                            </li>
-                            <li class="sitemap-item">
-                                <i class="fas fa-chart-line sitemap-icon"></i>
-                                <a href="https://blog.drjforrest.com/african-digital-development">Featured Series</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+        li {
+            margin: 0.5rem 0;
+        }
 
-        <div class="section-divider"></div>
+        a {
+            color: #2f70c1;
+            text-decoration: none;
+        }
 
-[Rest of the HTML content remains the same...]
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .explanation-text {
+            margin-bottom: 2rem;
+        }
+
+        .site-organization {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="explanation-text">
+            Welcome to my supplementary blog space. While my <a href="https://blog.drjforrest.com">main blog</a> focuses on in-depth series and featured content, this site serves two specific purposes:
+            <ul>
+                <li>Quick, standalone blog posts for timely thoughts and insights</li>
+                <li>Interactive presentations (Marp) for talks and conferences</li>
+            </ul>
+        </div>
+
+        <div class="site-organization">
+            <h2>Site Organization</h2>
+            
+            <h3>Quick Blog Posts</h3>
+            <ul>
+                <li>Individual Entries</li>
+                <li>Timely Insights</li>
+                <li>Brief Thoughts</li>
+            </ul>
+
+            <h3>Presentations</h3>
+            <ul>
+                <li>Interactive Slides</li>
+                <li>Conference Talks</li>
+                <li>Marp Decks</li>
+            </ul>
+
+            <h3>Related Sites</h3>
+            <ul>
+                <li><a href="https://drjforrest.com">Main Website</a></li>
+                <li><a href="https://blog.drjforrest.com">Featured Blog</a></li>
+                <li><a href="https://blog.drjforrest.com/african-digital-development">Featured Series</a></li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
