@@ -1,25 +1,16 @@
 {
   "name": "simple-blog",
   "version": "1.0.0",
-  "description": "A simple static blog site",
-  "main": "index.js",
+  "description": "A simple static blog and presentation platform",
   "scripts": {
-    "dev": "http-server . -p 3000",
-    "build": "npm run copy-assets",
-    "copy-assets": "cp -r images/* dist/images/ && cp -r css/* dist/css/",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "blog",
-    "static-site",
-    "markdown"
-  ],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "http-server": "^14.1.1"
+    "clean": "rm -rf dist",
+    "make-dirs": "mkdir -p dist/images dist/css dist/js dist/posts dist/presentations",
+    "copy-assets": "cp -r images/* dist/images/ 2>/dev/null || : && cp -r css/* dist/css/ && cp -r js/* dist/js/",
+    "copy-html": "cp *.html dist/",
+    "build": "npm run clean && npm run make-dirs && npm run copy-assets && npm run copy-html",
+    "dev": "npm run build && serve dist"
   },
   "dependencies": {
-    "marked": "^4.2.4"
+    "serve": "^14.2.1"
   }
 }
