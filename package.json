@@ -4,10 +4,13 @@
   "description": "A simple static blog and presentation platform",
   "scripts": {
     "clean": "rm -rf dist",
-    "make-dirs": "mkdir -p dist/images dist/css dist/js dist/posts dist/presentations",
+    "make-dirs": "mkdir -p dist/images dist/css dist/js dist/posts dist/presentations dist/marps",
     "copy-assets": "cp -r images/* dist/images/ 2>/dev/null || : && cp -r css/* dist/css/ && cp -r js/* dist/js/",
     "copy-html": "cp *.html dist/",
-    "build": "npm run clean && npm run make-dirs && npm run copy-assets && npm run copy-html",
+    "copy-posts": "cp -r posts/content/* dist/posts/ 2>/dev/null || :",
+    "copy-marps": "cp -r marps/* dist/marps/ 2>/dev/null || :",
+    "copy-posts-json": "cp posts/posts.json dist/posts/ 2>/dev/null || :",
+    "build": "npm run clean && npm run make-dirs && npm run copy-assets && npm run copy-html && npm run copy-posts && npm run copy-marps && npm run copy-posts-json",
     "dev": "npm run build && serve dist"
   },
   "dependencies": {
