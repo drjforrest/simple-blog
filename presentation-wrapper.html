@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marp Presentation Viewer</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .presentation-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .presentation-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .loading {
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="loading">Loading presentation...</div>
+        <iframe class="presentation-iframe" id="presentation-frame"></iframe>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const presentationPath = urlParams.get('path');
+            
+            if (presentationPath) {
+                const iframe = document.getElementById('presentation-frame');
+                iframe.src = decodeURIComponent(presentationPath);
+                
+                // Set title based on the presentation name
+                const pathParts = presentationPath.split('/');
+                const fileName = pathParts[pathParts.length - 1].replace('.html', '');
+                document.title = fileName + ' - Presentation';
+                
+                // Hide loading text when iframe is loaded
+                iframe.onload = function() {
+                    document.querySelector('.loading').style.display = 'none';
+                };
+            } else {
+                document.querySelector('.loading').textContent = 'Error: No presentation path specified';
+            }
+        });
+    </script>
+</body>
+</html>
